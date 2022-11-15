@@ -1,0 +1,122 @@
+/* FOOTER */
+.footer {
+    background-color: $lila-general;
+    color: $white-general;
+
+    .footer-container {
+        @include display(flex, space-around, center);
+        flex-wrap: wrap;
+        border-top: 1px solid $white-general;
+
+        .container-redes {
+            margin: 40px;
+
+            .redes {
+                display: flex;
+                gap: 40px;
+                padding-top: 17px;
+
+                a {
+                    i {
+                        color: $black-general;
+                        font-size: nth($font-size,9);
+                        transition: all .5s;
+
+                        @include query-678 {
+                            font-size: nth($font-size, 8)!important;
+                        }
+                    }
+
+                    .fb:hover {
+                        color: #233cad;
+                    }
+                    
+                    .yb:hover {
+                        color: red;
+                    }
+                    
+                    .ig:hover {
+                        color: rgb(250, 67, 0);
+                    }
+                    
+                    .lk:hover {
+                        color: #0077b5;
+                    }
+                }
+            }
+        }
+
+        .container-pagos {
+            margin: 40px;
+
+            .pagos {
+                display: flex;
+                gap: 40px;
+                padding-top: 17px;
+
+                i {
+                    color: $black-general;
+                    font-size: nth($font-size, 9);
+                    transition: all .5s;
+
+                    @include query-678 {
+                        font-size: nth($font-size, 8) !important;
+                    }
+                }
+
+                .credit:hover {
+                    transform: scale(1.1) rotate(360deg);
+                    color: $white-general;
+                }
+
+                .paypal:hover {
+                    transform: scale(1.1) rotate(360deg);
+                    color: #003087;
+                }
+
+                .btc:hover {
+                    transform: scale(1.1) rotate(360deg);
+                    color: #f2a900;
+                }
+
+                .wallet:hover {
+                    transform: scale(1.1) rotate(360deg);
+                    color: $white-general;
+                }
+            }
+        }
+
+        .container-ubicacion {
+            display: flex;
+            gap: 20px;
+            margin: 40px;
+
+            @include query-480 {
+                flex-direction: column;
+                justify-content: start;
+            }
+
+            .maps {
+                @include query-480 {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+        
+        div {
+            .text-footer {
+                font-size: nth($font-size, 5);
+
+                @include query-768 {
+                    font-size: nth($font-size, 4);
+                }
+
+                @include query-480 {
+                    font-size: nth($font-size, 1);
+                }
+            }
+        }
+    }
+}
+/* END FOOTER */

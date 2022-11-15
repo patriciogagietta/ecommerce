@@ -1,0 +1,18 @@
+/* MAIN AYUDA */
+main {
+    .acordeon-container {
+        padding: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include query-768 {
+            padding: 120px 60px;
+        }
+
+        @include query-480 {
+            padding: 120px 30px;
+        }
+    }
+}
+/* END MAIN AYUDA */

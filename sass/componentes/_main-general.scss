@@ -1,0 +1,125 @@
+/* MAIN */
+main {
+    background-color: $bg-main;
+
+    .h3-productos-destacados,
+    .h3-ofertas {
+        font-size: nth($font-size, 7);
+        padding-top: 80px;
+        padding-bottom: 30px;
+        text-align: center;
+        color: $white-general;
+
+        @include query-480 {
+            font-size: nth($font-size, 5);
+        }
+    }
+
+    .container-productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+        padding: 0 40px;
+
+        @include query-480 {
+            padding: 0 10px;
+            gap: 30px;
+        }
+
+        .container-article {
+            width: 270px;
+            padding: 30px;
+            margin-bottom: 60px;
+            box-shadow: 13px 13px 30px $black-general;
+            transition: background-color 1s, background-image 1s, border 0s, transform 1s;
+            border-radius: 10px;
+
+            @include query-480 {
+                max-width: 200px;
+            }
+
+            &:hover {
+                background-color: $lila-general;
+                background-image: linear-gradient(0deg, $lila-general 69%, $black-general 100%);
+                border: 2px solid $white-general;
+                transform: scale(1.07);
+
+                .boton-container {
+                    .boton-carrito {
+                        background-color: $bg-main;
+                    }
+                }
+            }
+
+            .image-article {
+                width: 100%;
+            }
+
+            .nombre-producto {
+                text-align: center;
+                color: $white-general;
+            }
+
+            .precio {
+                padding: 10px;
+                text-align: center;
+                color: $white-general;
+                font-size: nth($font-size, 6);
+            }
+
+            .boton-container {
+                @include display (flex, center, center);
+
+                .boton-carrito {
+                    padding: 10px 20px;
+                    text-align: center;
+                    background-color: $lila-general;
+                    color: $white-general;
+                    border-radius: 10px;
+                    font-size: nth($font-size, 2);
+                    cursor: pointer;
+                    transition: transform .5s;
+
+                    @include query-480 {
+                        padding: 5px 10px;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    .section-img-main-container {
+        position: relative;
+
+        .section-img-main {
+            width: 100%;
+            height: 100%;
+        }
+
+        .h1-main {
+            text-align: center;
+            font-size: nth($font-size, 10);
+            color: $white-general;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include query-768 {
+                font-size: nth($font-size, 9) !important;
+            }
+
+            @include query-480 {
+                font-size: nth($font-size, 8) !important;
+            }
+        }
+
+        
+    }
+
+}

@@ -1,0 +1,36 @@
+/* MAIN PRODUCTOS */ 
+main {
+    .section-productos-container {
+        display: flex;
+        padding: 100px;
+        gap: 40px;
+
+        @include query-678 {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .productos-parrafos-main {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h3 {
+                font-size: nth($font-size, 8);
+                color: $white-general;
+            }
+
+            p {
+                color: $white-general;
+                cursor: pointer;
+                transition: all .5s;
+
+                &:hover {
+                    color: $lila-general;
+                }
+            }
+        }
+    }
+}
+/* END MAIN PRODUCTOS */

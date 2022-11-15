@@ -1,0 +1,60 @@
+// @import '../base/mixin';
+/* MAIN NOSOTROS*/
+main {
+    .container {
+        .container-nosotros {
+            margin-top: 40px;
+
+            .name-logo-nosotros {
+                @include display (flex, center, center);
+                flex-direction: column;
+
+                .name-local-1 {
+                    color: $white-general;
+                    text-align: center;
+
+                    @include query-480 {
+                        font-size: nth($font-size, 4);
+                    }
+                }
+
+                .img-logo-nosotros {
+                    @include query-768 {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        .container-parrafo-nosotros {
+            @include display (flex, center, center);
+            padding-top: 20px;
+
+            .parrafo-nosotros {
+                color: $white-general;
+                text-align: center;
+            }
+        }
+
+        .nuestro-local-container {
+            margin-top: 120px;
+            padding-bottom: 40px;
+
+            .nuestro-local {
+                padding-top: 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .name-local-2 {
+                color: $white-general;
+                text-align: center;
+
+                @include query-480 {
+                    font-size: nth($font-size, 4);
+                }
+            }
+        }
+    }
+}
+/* END MAIN NOSOTROS*/

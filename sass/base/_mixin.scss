@@ -1,0 +1,29 @@
+@mixin query-1000 {
+    @media screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin query-768 {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin query-678 {
+    @media screen and (max-width: 678px) {
+        @content;
+    }
+}
+
+@mixin query-480 {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin display($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}

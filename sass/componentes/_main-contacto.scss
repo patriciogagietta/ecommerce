@@ -1,0 +1,42 @@
+/* MAIN CONTACTO */
+main {
+    .form-container {
+        @include display (flex, center, center);
+        flex-direction: column;
+        gap: 80px;
+        padding: 100px 0;
+
+        .form-input {
+            padding: 15px;
+            border-radius: 10px;
+            background-color: $bg-main;
+            border: 1px solid $white-general;
+            color: $white-general;
+            box-shadow: 13px 13px 30px $black-general;
+            width: 600px;
+
+            @include query-1000 {
+                width: 400px !important;
+            }
+
+            @include query-678 {
+                width: 300px !important;
+            }
+
+            @include query-480 {
+                width: 250px !important;
+            }
+        }
+
+        .button {
+            background-color: $bg-main;
+            cursor: pointer;
+            transition: all .5s;
+
+            &:hover {
+                background-color: $lila-general;
+            }
+        }
+    }
+}
+/* END MAIN CONTACTO*/
